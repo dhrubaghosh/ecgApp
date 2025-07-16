@@ -1,0 +1,16 @@
+.custom_form {
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+    padding: 0 1rem;
+  }
+.btn {
+    background-color: #4CAF50;
+    color: white;
+}
+  
+  @media screen and (max-width: 650px) {
+    .responsive_row {
+      flex-direction: column;
+    }
+  }
+  

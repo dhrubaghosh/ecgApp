@@ -1,0 +1,121 @@
+.navbar {
+    height: 10vh;
+    background-color: #15803D;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+}
+
+.navbar_left_content {
+    height: 10vh;
+}
+
+.navbar_img {
+    height: 80%;
+    margin: 7px 5px 25px 25px;
+}
+
+.navbar_left_heading {
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.navbar_left_heading_content1 {
+    margin: 10px 0px 0px 0px;
+    border: none;
+}
+
+.navbar_left_heading_content2 {
+    margin: 0px;
+}
+
+.navbar_right_content {
+    display: flex;
+    margin-left: auto;
+    gap: 30px;
+    margin-right: 2rem;
+    color: white;
+}
+
+.navbar_right_content a {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    padding-bottom: 5px;
+}
+
+.navbar_right_content .active {
+    position: relative;
+    color: white !important;
+    font-weight: bold;
+}
+
+.navbar_right_content .active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: rgb(245, 245, 83);
+    border-radius: 2px;
+}
+
+.menu, .menu_content {
+    display: none;
+}
+
+/* To create space for the fixed navbar */
+:global(body) {
+    padding-top: 10vh; /* Same as navbar height */
+}
+
+@media screen and (max-width: 920px) {
+    .navbar_left_heading, .navbar_right_content {
+        display: none;
+    }
+    
+    .menu {
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        margin-right: 2rem;
+        color: white;
+    }
+    
+    .menu_content {
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+        height: 50vh;
+        position: fixed;
+        gap: 30px;
+        background-color: #15803D;
+        color: white;
+        z-index: 100;
+        padding-top: 40px;
+        padding-left: 2rem;
+        right: 0;
+    }
+    .menu_content a {
+        position: relative;
+        text-decoration: none;
+        color: white;
+        padding: 8px 0 8px 15px;
+        margin-left: -15px; 
+    }
+    .menu_content .active {
+        position: relative;
+        color: white !important;
+        font-weight: bold;
+        border-left: 4px solid rgb(245, 245, 83);
+        padding-left: 11px;
+    }
+}

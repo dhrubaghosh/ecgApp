@@ -1,0 +1,65 @@
+.headingCard {
+    margin-bottom: 2rem;
+    background-color: #15803D;
+    padding: 2rem 0 2rem 0;
+    color: white;
+    border-top: 1px solid #0f6b31;
+
+}
+.headingCard>h1 {
+    margin-top: 0;
+    text-align: center;
+}
+.headingCard>p {
+    text-align: center;
+    width: 60%;
+    margin: auto;
+    padding-bottom: 20px;
+}
+.headingCard_button {
+    display: flex;
+    justify-content: center;
+}
+.headingCard_btn {
+    border-radius: 20px;
+    background-color: rgb(241, 241, 44);
+    border: none;
+}
+.contact_form {
+    background-color: #F9FAFB;
+}
+.detail {
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+.details_text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.details_text > p {
+    text-align: left;
+    font-size: 12px !important;
+}
+
+
+
+
+
+@media screen and (max-width: 650px) {
+    .detail {
+        flex-direction: column;
+        margin: 1rem;
+        font-size: 14px !important;
+    }
+    .detail > img {
+        width: 100% !important;
+    }
+    .details_text,
+    .details img {
+      width: 100% !important;
+    }
+}

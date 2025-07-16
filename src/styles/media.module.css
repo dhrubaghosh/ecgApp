@@ -1,0 +1,110 @@
+.galleryContainer {
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #F9FAFB;
+  }
+  
+  .loadingContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+  }
+  
+  .mediaCard {
+    height: 200px;
+    transition: transform 0.2s ease;
+  }
+  
+  .mediaCard:hover {
+    transform: translateY(-5px);
+  }
+  
+  .cardImage {
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .thumbnailContainer {
+    position: relative;
+  }
+  
+  .playOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .mediaCard:hover .playOverlay {
+    opacity: 1;
+  }
+  
+  .playButton {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: #333;
+  }
+  
+  .videoModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .videoWrapper {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    background: #000;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    color: white;
+    font-size: 24px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1001;
+  }
+  
+  .closeButton:hover {
+    background: rgba(255, 255, 255, 0.5);
+  }
+  
+  .videoPlayer {
+    width: 100%;
+    display: block;
+  }
+  

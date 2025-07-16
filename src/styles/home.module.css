@@ -1,0 +1,63 @@
+.container {
+    width: 100%;
+}
+.getinvolved {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-bottom: 3rem;
+}
+
+.getinvolved_text {
+    width: calc(50% + 38px);
+    height: 220px;
+    background-color: #8BC34A;
+    color: white;
+    border-radius: 25px;
+    position: relative;
+    margin-right: -38px;
+}
+
+.getinvolved_text_inner {
+    margin-left: 3rem;
+    margin-top: 3rem;
+    width: 70%;
+}
+
+.getinvolved_text_inner>p {
+    text-align: left;
+}
+
+.getinvolved_text_btn {
+    border-radius: 20px;
+    background-color: rgb(241, 241, 44);
+    border: none;
+}
+
+.getinvolved_svg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+.getinvolved_img {
+    border-radius: 25px;
+    width: calc(50%);
+    height: 220px;
+    background-image: url('../assets/getInvolved1.jpg');
+    background-size: cover;
+    background-position: center top 66%;
+    position: relative;
+    margin-left: -1px;
+    z-index: 2;
+}
+
+@media screen and (max-width: 675px) {
+    .getinvolved {
+        display: none;
+    }
+}

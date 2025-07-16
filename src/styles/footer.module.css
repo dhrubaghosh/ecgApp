@@ -1,0 +1,37 @@
+.footer {
+    height: 6rem;
+    width: auto;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.footer > p {
+    margin-left: 30px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.footer_icons {
+    margin-left: auto;
+    margin-right: 30px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+@media screen and (max-width: 675px) {
+    .footer {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        height: 8rem;
+    }
+    .footer > p {
+        margin: auto;
+        font-size: 16px;
+    }
+    .footer_icons {
+        margin: auto;
+    }
+}

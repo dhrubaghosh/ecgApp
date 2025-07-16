@@ -1,0 +1,85 @@
+.adminpanel {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+  font-family: Arial, sans-serif;
+}
+
+.adminTitle {
+  text-align: center;
+  color: #2e7d32;
+  font-weight: bold;
+  font-size: 28px;
+  margin-bottom: 16px;
+  border-bottom: 2px solid #4caf50;
+  padding-bottom: 8px;
+}
+
+.tabsContainer {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.centerTabs .ant-tabs-nav {
+  justify-content: center;
+}
+
+.tableWrapper {
+  margin-top: 16px;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+}
+
+.imagePreview {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.titleEdit {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.replaceSection {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.uploadButton {
+  background-color: #4caf50 !important;
+  border-color: #4caf50 !important;
+  color: white !important;
+}
+
+.uploadButton:hover {
+  background-color: #45a049 !important;
+  border-color: #45a049 !important;
+}
+
+.saveButton {
+  background-color: #2e7d32 !important;
+  border-color: #2e7d32 !important;
+  color: white !important;
+}
+
+.saveButton:hover {
+  background-color: #27632a !important;
+  border-color: #27632a !important;
+}
+
+.ant-table-thead > tr > th {
+  background-color: #f1f8f4 !important;
+  color: #2e7d32 !important;
+  font-weight: bold;
+}
+
+.ant-table-cell {
+  vertical-align: middle !important;
+}
