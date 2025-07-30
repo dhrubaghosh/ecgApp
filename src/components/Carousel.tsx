@@ -15,7 +15,7 @@ type Props = {
 
 const Carousels: React.FC<Props> = ({ image1, image2, image3, heading1, heading2, heading3 }) => {
     const onChange = (currentSlide: number) => {
-        // console.log(currentSlide);
+         console.log(currentSlide);
     };
     const paragraph = "Join our global mission to document climate change impacts and inspire actionable solutions through scientific expeditions.Contrary to popular belief, Lorem Ipsum is not simply random text.";
     const [isModalOpen, setIsModalOpen] = useState(false);
