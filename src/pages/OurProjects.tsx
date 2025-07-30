@@ -24,6 +24,8 @@ interface CarouselItem {
 }
 
 const OurProjects: React.FC = () => {
+const apiBase = import.meta.env.VITE_API_URL;
+
   const [items, setItems] = useState<CarouselItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -33,7 +35,7 @@ const OurProjects: React.FC = () => {
    useEffect(() => {
     async function fetchWordings() {
       try {
-        const res = await fetch('/api/wordings');
+        const res = await fetch(`${apiBase}/api/wordings`);
         const data = await res.json();
         const map: { [key: string]: string } = {};
         data.forEach((item: { KeyName: string; Value: string }) => {

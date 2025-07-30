@@ -4,6 +4,7 @@ import { FacebookOutlined, TwitterOutlined, LinkedinOutlined } from "@ant-design
 
 
 const Footer: React.FC = () => {
+    // Comment added
     return (
         <div className={ Styles.footer}>
             <p>Copyright © 2025 <strong>www.ecgwild.org.</strong>All rights reserved</p>
