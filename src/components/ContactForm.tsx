@@ -3,6 +3,7 @@ import type { FormProps } from "antd";
 import { Form, Input, Button, Row, Col, message } from "antd";
 import Styles from "../styles/contactusForm.module.css";
 
+
 type FieldType = {
   name?: string;
   phone?: string;
@@ -11,6 +12,10 @@ type FieldType = {
 };
 
 const ContactForm: React.FC = () => {
+
+  const apiBase = import.meta.env.VITE_API_URL;
+
+  
   const [form] = Form.useForm();
   const [isSubmitDisabled, setIsSubmitDisabled] = useState(true);
 
@@ -27,7 +32,7 @@ const ContactForm: React.FC = () => {
   const onFinish: FormProps<FieldType>["onFinish"] = async (values) => {
     console.log("Success:", values);
     try {
-      const response = await fetch("/api/contacts", {
+      const response = await fetch(`${apiBase}/api/contacts`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

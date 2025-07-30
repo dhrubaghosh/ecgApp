@@ -4,6 +4,8 @@ import { Form, Input, InputNumber, Select, Button, message } from "antd";
 const { Option } = Select;
 
 const DonationForm = ({ verifyPayment }: any) => {
+  const apiBase = import.meta.env.VITE_API_URL;
+
   const [form] = Form.useForm();
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
 
@@ -17,7 +19,7 @@ const DonationForm = ({ verifyPayment }: any) => {
         return;
       }
 
-      const response = await fetch("/api/payments/create-order", {
+      const response = await fetch(`${apiBase}/api/payments/create-order`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

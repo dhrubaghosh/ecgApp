@@ -16,6 +16,8 @@ import aboutus2 from "../assets/aboutus2.jpg";
 import aboutus3 from "../assets/aboutus3.jpg";
 
 const Home: React.FC = () => {
+  const apiBase = import.meta.env.VITE_API_URL;
+
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [wordings, setWordings] = useState<{ [key: string]: string }>({});
   const [loading, setLoading] = useState(true);
@@ -31,7 +33,7 @@ const Home: React.FC = () => {
   useEffect(() => {
     async function fetchWordings() {
       try {
-        const res = await fetch('/api/wordings');
+        const res = await fetch(`${apiBase}/api/wordings`);
         const data = await res.json();
         const map: { [key: string]: string } = {};
         data.forEach((item: { KeyName: string; Value: string }) => {
@@ -39,7 +41,7 @@ const Home: React.FC = () => {
         });
         setWordings(map);
       } catch (error) {
-        console.error('Error fetching wordings:', error);
+        console.error("Error fetching wordings:", error);
       } finally {
         setLoading(false);
       }
@@ -59,33 +61,33 @@ const Home: React.FC = () => {
           image1={img1}
           image2={img2}
           image3={img3}
-          heading1={wordings.heading1 || ''}
-          heading2={wordings.heading2 || ''}
-          heading3={wordings.heading3 || ''}
+          heading1={wordings.heading1 || ""}
+          heading2={wordings.heading2 || ""}
+          heading3={wordings.heading3 || ""}
         />
         <CustomHeading
           heading="About Us"
-          paragraph={wordings.paragraph || ''}
+          paragraph={wordings.paragraph || ""}
           backgroundColor="white"
         >
           <CustomCard
-            Card1_Heading={wordings.aboutusHeading1 || ''}
-            card1_Paragraph_Bold={wordings.aboutusParagraph1Bold || ''}
-            card1_Paragraph={wordings.aboutusParagraph1 || ''}
+            Card1_Heading={wordings.aboutusHeading1 || ""}
+            card1_Paragraph_Bold={wordings.aboutusParagraph1Bold || ""}
+            card1_Paragraph={wordings.aboutusParagraph1 || ""}
             image1={aboutus1}
             image2={aboutus2}
             image3={aboutus3}
-            Card2_Heading={wordings.aboutusHeading2 || ''}
-            card2_Paragraph_Bold={wordings.aboutusParagraph2Bold || ''}
-            Card2_Paragraph={wordings.aboutusParagraph2 || ''}
-            Card3_Heading={wordings.aboutusHeading3 || ''}
-            Card3_Paragraph={wordings.aboutusParagraph3 || ''}
+            Card2_Heading={wordings.aboutusHeading2 || ""}
+            card2_Paragraph_Bold={wordings.aboutusParagraph2Bold || ""}
+            Card2_Paragraph={wordings.aboutusParagraph2 || ""}
+            Card3_Heading={wordings.aboutusHeading3 || ""}
+            Card3_Paragraph={wordings.aboutusParagraph3 || ""}
             showOrNot={false}
           />
         </CustomHeading>
         <CustomHeading
           heading="Get Involved"
-          paragraph={wordings.paragraph || ''}
+          paragraph={wordings.paragraph || ""}
           backgroundColor="#F9FAFB"
         >
           <div className={Styles.getinvolved}>

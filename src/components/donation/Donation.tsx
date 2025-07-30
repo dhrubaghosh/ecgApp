@@ -11,6 +11,8 @@ type Props = {
 };
 
 const Donation: React.FC<Props> = ({ open, close }) => {
+  const apiBase = import.meta.env.VITE_API_URL;
+
   const { token } = theme.useToken();
   const [current, setCurrent] = useState(0);
   const [paymentSuccess, setPaymentSuccess] = useState(false);
@@ -22,7 +24,7 @@ const Donation: React.FC<Props> = ({ open, close }) => {
 
   const verifyPayment = async (paymentDetails: any, donor: any) => {
     try {
-      await fetch("/api/payments/verify-payment", {
+      await fetch(`${apiBase}/api/payments/verify-payment`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ ...paymentDetails, donorData: donor }),
@@ -39,7 +41,9 @@ const Donation: React.FC<Props> = ({ open, close }) => {
     const doc = new jsPDF();
     doc.setFontSize(18);
     doc.setFont("helvetica", "bold");
-    doc.text("Environment Conservation Group - Donation Receipt", 105, 20, { align: "center" });
+    doc.text("Environment Conservation Group - Donation Receipt", 105, 20, {
+      align: "center",
+    });
 
     doc.setLineWidth(0.5);
     doc.rect(20, 8, 170, 20);
